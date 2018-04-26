@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web:600&amp;subset=latin-ext" rel="stylesheet">
 	<title>Weekly WebDev Challenge 01</title>
 </head>
 
@@ -19,27 +20,35 @@
 		<div class="formsCol">
 
 			<section class="forms">
-				<h1>Register Form</h1>
+				<p class="formTitle">Register Forms</p>
+
 				<form>
-					<input type="text" placeholder="Username" onfocus="this.placeholder=''" onblur="this.placeholder='Username'">
-					<input type="password" placeholder="Password" onfocus="this.placeholder=''" onblur="this.placeholder='Password'">
-					<input type="password" placeholder="Confirm Password" onfocus="this.placeholder=''" onblur="this.placeholder='Confirm Password'">
-					<input type="email" placeholder="Email" onfocus="this.placeholder=''" onblur="this.placeholder='Email'">
-					<input type="text" placeholder="Your Location" onfocus="this.placeholder=''" onblur="this.placeholder='Your Location'">
-					<input type="checkbox" id="termsAccept">
-					<label for="termsAccept"> I have read and accept term of use.</label>
+					<input class="user_thumb" type="text" placeholder="Username" onfocus="this.placeholder=''" onblur="this.placeholder='Username'" required>
+					<input class="pass_thumb" type="password" placeholder="Password" onfocus="this.placeholder=''" onblur="this.placeholder='Password'" required>
+					<input class="pass_thumb" type="password" placeholder="Confirm Password" onfocus="this.placeholder=''" onblur="this.placeholder='Confirm Password'" required>
+					<input class="mail_thumb" type="email" placeholder="Email" onfocus="this.placeholder=''" onblur="this.placeholder='Email'" required>
+					<input class="location_thumb" type="text" placeholder="Your Location" onfocus="this.placeholder=''" onblur="this.placeholder='Your Location'" required>
+					<div class="termConditions">
+						<input type="checkbox" id="termsAccept" required>
+						<label for="termsAccept"> I have read and accept term of use.</label>
+					</div>
+
 					<input type="submit" value="Sign Up">
 				</form>
 			</section>
 
 			<section class="forms">
-				<h1>Send Email</h1>
+				<p class="formTitle">Send Email</p>
 				<form>
-					<input type="text" placeholder="Username" onfocus="this.placeholder=''" onblur="this.placeholder='Username'">
-					<input type="email" placeholder="Email" onfocus="this.placeholder=''" onblur="this.placeholder='Email'">
-					<input class="longMessage" type="text" placeholder="Type Your message..." onfocus="this.placeholder=''" onblur="this.placeholder='Type Your message...'">
-					<input type="checkbox" id="termsAccept">
-					<label for="termsAccept"> Send a copy to my Email.</label>
+					<input class="user_thumb" type="text" placeholder="Username" onfocus="this.placeholder=''" onblur="this.placeholder='Username'" required>
+					<input class="mail_thumb" type="email" placeholder="Email" onfocus="this.placeholder=''" onblur="this.placeholder='Email'" required>
+					<span class="longMessage">
+						<input type="text" placeholder="Type Your message..." onfocus="this.placeholder=''" onblur="this.placeholder='Type Your message...'" required>
+					</span>
+					<div class="termConditions">
+						<input type="checkbox" id="termsAccept" required>
+						<label for="termsAccept"> Send a copy to my Email.</label>
+					</div>
 					<input type="submit" value="Send Email">
 				</form>
 
@@ -51,32 +60,43 @@
 		<div class="formsCol">
 
 			<section class="forms">
-				<h1>Sign In Form</h1>
+				<p class="formTitle">Sign in Form</p>
 				<form>
-					<input type="text" placeholder="Username" onfocus="this.placeholder=''" onblur="this.placeholder='Username'">
-					<input type="password" placeholder="Password" onfocus="this.placeholder=''" onblur="this.placeholder='Password'">
-					<input type="checkbox" id="termsAccept">
-					<label for="termsAccept"> Remember me.</label>
+					<input class="user_thumb" type="text" placeholder="Username" onfocus="this.placeholder=''" onblur="this.placeholder='Username'" required>
+					<input class="pass_thumb" type="password" placeholder="Password" onfocus="this.placeholder=''" onblur="this.placeholder='Password'" required>
+					<div class="termCondition">
+						<input type="checkbox" id="termsAccept" required>
+						<label for="termsAccept"> Remember me.</label>
+					</div>
 					<input type="submit" value="Sign In">
 				</form>
 			</section>
 
 			<section class="forms">
-				<h1>Recover Form</h1>
+				<p class="formTitle">Recovery Form</p>
 				<form>
-					<input type="email" placeholder="Enter your Email" onfocus="this.placeholder=''" onblur="this.placeholder='Email'">
-					<input type="text" placeholder="Enter your Phone Number" onfocus="this.placeholder=''" onblur="this.placeholder='Phone_Number'">
-					<input type="submit" value="Send">
-					<input type="submit" value="Done" disabled="true">
+					<input class="mail_thumb" type="email" placeholder="Enter your Email" onfocus="this.placeholder=''" onblur="this.placeholder='Email'" required>
+					<input class="phone_thumb" type="text" placeholder="Enter your Phone Number" onfocus="this.placeholder=''" onblur="this.placeholder='Phone_Number'" required>
+					<div class="rowBtns">
+						<input type="submit" value="Send">
+						<span class="disabledBtn">
+							<input type="submit" value="Done" disabled>
+						</span>
+					</div>
+
+
 				</form>
 
 			</section>
 			<section class="forms">
-				<h1>Subscribe Form</h1>
+				<p class="formTitle">Subscribe Form</p>
 				<form>
-					<input type="email" placeholder="Enter your Email" onfocus="this.placeholder=''" onblur="this.placeholder='Email'">
-					<input type="submit" value="Subscrine">
-					<input type="submit" value="No,Thanks">
+					<input type="email" placeholder="Enter your Email" onfocus="this.placeholder=''" onblur="this.placeholder='Email'" required>
+					<div class="rowBtns">
+						<input type="submit" value="Subscrine">
+						<button class="rejection">No,Thanks</button>
+					</div>
+
 				</form>
 			</section>
 			<img class="logo" src="images/logo_bottom.png" alt="lizard_logo" />

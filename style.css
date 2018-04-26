@@ -9,6 +9,7 @@ body {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	font-family: 'Titillium Web', sans-serif;
 }
 
 header {
@@ -33,53 +34,112 @@ main {
 }
 
 .forms {
-	width: 500px;
-	margin-bottom: 20px;
-	min-height: 100px;
-	background: #eff4fc;
+	width: 60%;
 	text-align: center;
-	-webkit-box-shadow: 0px 0px 0px 17px rgba(173, 173, 173, 1);
-	-moz-box-shadow: 0px 0px 0px 17px rgba(173, 173, 173, 1);
-	box-shadow: 0px 0px 0px 17px rgba(173, 173, 173, 1);
+}
+
+.formTitle {
+	font-size: 32px;
+	color: white;
+	margin-bottom: 20px;
+	letter-spacing: 1px;
 }
 
 form {
 	display: flex;
 	flex-direction: column;
+	background: rgb(244, 244, 244);
+	-webkit-box-shadow: 0px 0px 0px 17px rgba(173, 173, 173, 0.6);
+	-moz-box-shadow: 0px 0px 0px 17px rgba(173, 173, 173, 0.6);
+	box-shadow: 0px 0px 0px 17px rgba(173, 173, 173, 0.6);
+	margin-top: 30px;
+	margin-bottom: 30px;
 }
 
 input[type=text],
 input[type=password],
 input[type=email] {
-	width: 300px;
-	background-color: #efefef;
-	color: #666;
+	width: 85%;
+	background-color: rgb(246, 246, 246);
+	color: black;
+	padding: 10px 0px 10px 70px;
 	border-radius: 5px;
-	font-size: 20px;
-	padding: 10px;
+	font-size: 16px;
 	outline: none;
-	margin-top: 10px;
+	margin-top: 24px;
 	align-self: center;
 }
 
 input[type=submit] {
-	width: 300px;
+	width: 85%;
 	align-self: center;
-	background-color: #36b06c;
-	font-size: 20px;
+	background-color: rgb( 127, 196, 31);
+	font-size: 24px;
 	color: white;
 	padding: 15px 10px;
 	margin-top: 20px;
-	border: none;
+	margin-bottom: 30px;
 	border-radius: 5px;
 	cursor: pointer;
 	letter-spacing: 2px;
 	outline: none;
 }
 
-.longMessage {
-	height: 250px;
+.longMessage input[type=text] {
+	padding: 5px 0 250px 5px;
 }
+
+.user_thumb {
+	background: url(images/icon-person.png) no-repeat left;
+}
+
+.mail_thumb {
+	background: url(images/icon-envelop.png) no-repeat left;
+}
+
+.pass_thumb {
+	background: url(images/icon-lock.png) no-repeat left;
+}
+
+.location_thumb {
+	background: url(images/icon-location.png) no-repeat left;
+}
+
+.phone_thumb {
+	background: url(images/icon-phone.png) no-repeat left;
+}
+
+.termConditions {
+	display: flex;
+	font-size: 17px;
+	justify-content: center;
+	align-items: center;
+}
+
+.rejection {
+	background-color: rgb(240, 55, 71);
+	border: 1px solid rgb(167, 44, 54);
+	width: 85%;
+	align-self: center;
+	font-size: 24px;
+	color: white;
+	padding: 15px 10px;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	border-radius: 5px;
+	cursor: pointer;
+	letter-spacing: 2px;
+	outline: none;
+}
+
+.disabledBtn input[type=submit] {
+	background: rgb(196, 223, 162);
+	cursor: not-allowed;
+	padding: 15px 10px;
+	width: 85%;
+}
+
+.rowBtns {}
 
 .logo {
 	opacity: 0.4;
