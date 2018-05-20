@@ -63,6 +63,7 @@ input[type=email] {
 	background-color: rgb(246, 246, 246);
 	color: black;
 	padding: 10px 0px 10px 70px;
+	border: 1px solid rgb(198, 198, 198);
 	border-radius: 5px;
 	font-size: 16px;
 	outline: none;
@@ -73,12 +74,14 @@ input[type=email] {
 input[type=submit] {
 	width: 85%;
 	align-self: center;
-	background-color: rgb( 127, 196, 31);
+	background: linear-gradient(rgb(163, 216, 64), rgb(126, 196, 31));
 	font-size: 24px;
+	text-shadow: 2px 2px 3px rgb(84, 75, 81);
 	color: white;
 	padding: 15px 10px;
 	margin-top: 20px;
 	margin-bottom: 30px;
+	border: 1px solid rgb(59, 154, 0);
 	border-radius: 5px;
 	cursor: pointer;
 	letter-spacing: 2px;
@@ -117,13 +120,13 @@ input[type=submit] {
 }
 
 .rejection {
-	background-color: rgb(240, 55, 71);
+	background: linear-gradient(rgb(246, 94, 112), rgb(240, 55, 71));
 	border: 1px solid rgb(167, 44, 54);
-	width: 85%;
-	align-self: center;
-	font-size: 24px;
+	width: 45%;
+	font-size: 18px;
+	text-shadow: 2px 2px 3px rgb(84, 75, 81);
 	color: white;
-	padding: 15px 10px;
+	padding: 10px 10px;
 	margin-top: 20px;
 	margin-bottom: 30px;
 	border-radius: 5px;
@@ -132,15 +135,27 @@ input[type=submit] {
 	outline: none;
 }
 
-.disabledBtn input[type=submit] {
-	background: rgb(196, 223, 162);
-	cursor: not-allowed;
-	padding: 15px 10px;
+.rowBtns {
+	display: flex;
+	justify-content: space-between;
 	width: 85%;
+	align-self: center;
 }
 
-.rowBtns {}
+.rowBtns .disabledBtn {
+	background: linear-gradient(rgb(198, 225, 166), rgb(171, 209, 130));
+	border: 1px solid rgb(196, 223, 162);
+	cursor: not-allowed;
+}
+
+.rowBtns input[type=submit] {
+	padding: 10px 10px;
+	font-size: 18px;
+	width: 45%;
+	border-radius: 5px;
+}
 
 .logo {
 	opacity: 0.4;
+	margin-bottom: 30px;
 }
