@@ -28,9 +28,10 @@
 					<input class="pass_thumb" type="password" placeholder="Confirm Password" onfocus="this.placeholder=''" onblur="this.placeholder='Confirm Password'" required>
 					<input class="mail_thumb" type="email" placeholder="Email" onfocus="this.placeholder=''" onblur="this.placeholder='Email'" required>
 					<input class="location_thumb" type="text" placeholder="Your Location" onfocus="this.placeholder=''" onblur="this.placeholder='Your Location'" required>
+					
 					<div class="termConditions">
 						<input type="checkbox" id="termsAccept" required>
-						<label for="termsAccept"> I have read and accept term of use.</label>
+						<label for="termsAccept" class="checkboxLabel"> I have read and accept term of use.</label>
 					</div>
 
 					<input type="submit" value="Sign Up">
@@ -46,8 +47,8 @@
 						<input type="text" placeholder="Type Your message..." onfocus="this.placeholder=''" onblur="this.placeholder='Type Your message...'" required>
 					</span>
 					<div class="termConditions">
-						<input type="checkbox" id="termsAccept" required>
-						<label for="termsAccept"> Send a copy to my Email.</label>
+						<input type="checkbox" id="sendMail" required>
+						<label for="sendMail"> Send a copy to my Email.</label>
 					</div>
 					<input type="submit" value="Send Email">
 				</form>
@@ -64,11 +65,13 @@
 				<form>
 					<input class="user_thumb" type="text" placeholder="Username" onfocus="this.placeholder=''" onblur="this.placeholder='Username'" required>
 					<input class="pass_thumb" type="password" placeholder="Password" onfocus="this.placeholder=''" onblur="this.placeholder='Password'" required>
-					<div class="termCondition">
-						<input type="checkbox" id="termsAccept" required>
-						<label for="termsAccept"> Remember me.</label>
+					<div class="signInContainer">
+						<div class="termConditions">
+							<input type="checkbox" id="rememberBox" required>
+							<label for="rememberBox"> Remember me.</label>
+						</div>
+						<input type="submit" value="Sign In" class="submitBtn">
 					</div>
-					<input type="submit" value="Sign In">
 				</form>
 			</section>
 
@@ -88,7 +91,7 @@
 				</form>
 
 			</section>
-			<section class="forms">
+			<section class="forms subForm">
 				<p class="formTitle">Subscribe Form</p>
 				<form>
 					<input class="mail_thumb" type="email" placeholder="Enter your Email" onfocus="this.placeholder=''" onblur="this.placeholder='Email'" required>

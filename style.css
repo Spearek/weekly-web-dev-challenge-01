@@ -115,9 +115,46 @@ input[type=submit] {
 .termConditions {
 	display: flex;
 	font-size: 17px;
-	justify-content: center;
+	justify-content: left;
 	align-items: center;
+	color: gray;
+	padding-top: 10px;
+	padding-left: 41px;
+	
 }
+input[type=checkbox]{
+	display:none;
+}
+input[type=checkbox] + label{
+	position:relative;
+	padding-left: 30px;
+	
+}
+input[type=checkbox] + label:before{
+	position: absolute;
+	content:"";
+	display:block;
+	width:16px;
+	height: 16px;
+	top: 3px;
+	left: 0;
+	cursor:pointer;
+	transition: all .3s ease;
+	background-color: rgb(241, 244, 244);
+	border: 3px solid rgb(215, 215, 215);
+	border-radius: 5px;
+
+}
+
+input[type=checkbox]:checked + label:before{
+	background-color: rgb(134, 199, 19);
+
+}
+
+
+
+
+
 
 .rejection {
 	background: linear-gradient(rgb(246, 94, 112), rgb(240, 55, 71));
@@ -155,7 +192,59 @@ input[type=submit] {
 	border-radius: 5px;
 }
 
+.signInContainer{
+	display:flex;
+}
+.signInContainer .termConditions{
+	position: relative;
+	width:45%;
+	top: -10px;
+
+	
+}
+.signInContainer .submitBtn{
+	position: relative;
+	width: 40%;
+	left: 7.5%;
+}
+
 .logo {
 	opacity: 0.4;
 	margin-bottom: 30px;
+}
+
+/*Responsiveness*/
+
+@media screen and (max-width:1000px){
+    main{
+		flex-direction: column;
+		align-items: center;
+/*justify-content: center;*/
+	}
+	.formsCol{
+		width:90%;
+	}
+	.forms{
+		width: 80%;
+	}
+}
+@media screen and (max-width:475px){
+	header img {
+		transform:scale(0.7);
+	}
+	.termConditions{
+		font-size: 14px;
+		padding-left: 10px;
+	}
+	.signInContainer .submitBtn{
+		font-size: 20px;
+	}
+
+	.subForm input[type=submit], .subForm button{
+		font-size : 11px;
+	}
+	.logo{
+		transform:scale(0.7);
+	}
+
 }
